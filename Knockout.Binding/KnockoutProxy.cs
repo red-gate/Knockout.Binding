@@ -46,7 +46,7 @@ namespace KnckoutBindingGenerater
 
         public string ViewModelInstanceName
         {
-            get { return "kevin"; }
+            get { return String.Format("{0}ProxyObjectInstance", m_ViewModelName); }
         }
     }
 }
