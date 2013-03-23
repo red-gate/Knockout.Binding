@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Knockout.Binding.Sample
 {
-    public class SimpleViewModel : IBindableToJs, INotifyPropertyChanged
+    internal class SimpleViewModel : ViewModelBase
     {
         private string m_SimpleString;
         private readonly ObservableCollectionEx<string> m_ObservableCollection = new ObservableCollectionEx<string>(Enumerable.Range(0, 10).Select(i => Convert.ToString(i)));
@@ -42,17 +42,9 @@ namespace Knockout.Binding.Sample
             StringCollection.Add(Guid.NewGuid().ToString());
         }
 
-        public string Name
+        public override string Name
         {
             get { return "simpleViewModelInstance"; }
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            var handler = PropertyChanged;
-            if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

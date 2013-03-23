@@ -1,0 +1,23 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+	    <title></title>
+        <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js"></script>
+	</head>
+    <body>
+        <div>   
+            <p>First name: <input data-bind='value: SimpleString' /></p> 
+            <p>Last name: <input data-bind='value: SimpleString' /></p> 
+            <button data-bind="click: ClickMethod">Click me</button>
+            
+            <ul data-bind="foreach: StringCollection">
+                <li>
+                    <span data-bind="text: $data"> </span>
+                </li>
+            </ul>
+            
+            <button onclick="simpleViewModelInstanceProxyObjectInstance.StringCollection.push('123')">Add to Array</button>
+            <button onclick="simpleViewModelInstanceProxyObjectInstance.StringCollection.pop()">Add to Array</button>
+        </div>
+    </body>
+</html>
