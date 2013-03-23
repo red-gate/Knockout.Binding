@@ -11,32 +11,30 @@ namespace Knockout.Binding.Sample
 {
     public partial class MainForm : Form
     {
-        private readonly WebView m_WebView;
+        private WebView m_WebView;
         private readonly SimpleViewModel m_SimpleViewModel = new SimpleViewModel();
 
         public MainForm()
         {
             CEF.Initialize(new Settings());
 
-            m_WebView = new WebView(GetPageLocation(), new BrowserSettings())
+            ChangePage("http://www.red-gate.com");
+
+            Menu = GetMenu();
+        }
+
+        private void ChangePage(string page)
+        {
+            Controls.Clear();
+
+            m_WebView = new WebView(page, new BrowserSettings())
                 {
                     Dock = DockStyle.Fill
                 };
 
             m_WebView.RegisterForKnockout(m_SimpleViewModel);
-            m_WebView.PropertyChanged += OnWebBrowserInitialized;
-            
-            Controls.Add(m_WebView);
-            
-            Menu = GetMenu();
-        }
 
-        private void OnWebBrowserInitialized(object sender, PropertyChangedEventArgs args)
-        {
-            if (String.Equals(args.PropertyName, "IsBrowserInitialized", StringComparison.OrdinalIgnoreCase))
-            {
-                m_WebView.Load(GetPageLocation());
-            }
+            Controls.Add(m_WebView);
         }
 
         private static string GetPageLocation()
@@ -51,12 +49,16 @@ namespace Knockout.Binding.Sample
             var showDevToolsItem = new MenuItem("Show Dev Tools");
             showDevToolsItem.Click += (sender, args) => m_WebView.ShowDevTools();
 
+            var showDebugPage = new MenuItem("Show Initial Page");
+            showDebugPage.Click += (sender, args) => ChangePage(GetPageLocation());
+
             var fileMenu = new MenuItem("File");
             fileMenu.MenuItems.Add(showDevToolsItem);
+            fileMenu.MenuItems.Add(showDebugPage);
 
             return new MainMenu(new[]
                 {
-                    fileMenu,
+                    fileMenu
                 });
         }
     }
