@@ -1,5 +1,5 @@
 ﻿//// ReSharper disable InconsistentNaming
-namespace Knockout.Binding.Sample
+namespace Knockout.Binding.Sample.ViewModels
 {
     internal class HelloWorldViewModel : ViewModelBase
     {

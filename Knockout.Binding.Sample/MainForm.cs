@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using CefSharp;
 using CefSharp.WinForms;
 using Knockout.Binding.ExtensionMethods;
+using Knockout.Binding.Sample.ViewModels;
 
 namespace Knockout.Binding.Sample
 {

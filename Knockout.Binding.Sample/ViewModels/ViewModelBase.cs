@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Knockout.Binding.Sample
+namespace Knockout.Binding.Sample.ViewModels
 {
     internal abstract class ViewModelBase : IBindableToJs
     {
