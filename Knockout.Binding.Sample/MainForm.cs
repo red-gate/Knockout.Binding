@@ -27,6 +27,8 @@ namespace Knockout.Binding.Sample
             m_WebView.PropertyChanged += OnWebBrowserInitialized;
             
             Controls.Add(m_WebView);
+            
+            Menu = GetMenu();
         }
 
         private void OnWebBrowserInitialized(object sender, PropertyChangedEventArgs args)
@@ -34,7 +36,6 @@ namespace Knockout.Binding.Sample
             if (String.Equals(args.PropertyName, "IsBrowserInitialized", StringComparison.OrdinalIgnoreCase))
             {
                 m_WebView.Load(GetPageLocation());
-                m_WebView.ShowDevTools();
             }
         }
 
@@ -43,6 +44,20 @@ namespace Knockout.Binding.Sample
             var runtimeDirectory = new FileInfo(Assembly.GetExecutingAssembly().Location).Directory.FullName;
 
             return Path.Combine(runtimeDirectory, "SomePage.htm");
+        }
+
+        private MainMenu GetMenu()
+        {
+            var showDevToolsItem = new MenuItem("Show Dev Tools");
+            showDevToolsItem.Click += (sender, args) => m_WebView.ShowDevTools();
+
+            var fileMenu = new MenuItem("File");
+            fileMenu.MenuItems.Add(showDevToolsItem);
+
+            return new MainMenu(new[]
+                {
+                    fileMenu,
+                });
         }
     }
 }
