@@ -16,11 +16,13 @@ namespace Knockout.Binding.Sample
 
         public MainForm()
         {
+            InitializeComponent();
+
             CEF.Initialize(new Settings());
 
-            ChangePage("http://www.red-gate.com");
-
             Menu = GetMenu();
+
+            ChangePage("http://www.red-gate.com");
         }
 
         private void ChangePage(string page)
