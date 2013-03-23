@@ -36,6 +36,9 @@
     <Reference Include="CefSharp.WinForms">
       <HintPath>..\packages\CefSharp.1.1180.724.19\lib\net40\CefSharp.WinForms.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="ObservableCollectionEx.4.0">
       <HintPath>..\packages\ObservableCollectionEx.1.0.2\lib\net40\ObservableCollectionEx.4.0.dll</HintPath>
     </Reference>
