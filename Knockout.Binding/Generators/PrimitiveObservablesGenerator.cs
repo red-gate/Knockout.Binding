@@ -32,8 +32,9 @@ namespace Knockout.Binding.Generators
         {
             Type propertyType = info.PropertyType;
 
-            return propertyType == typeof(string) ||
-                   propertyType == typeof(int);
+            return propertyType == typeof (string) ||
+                   propertyType == typeof (int) ||
+                   propertyType == typeof (bool);
         }
     }
 }

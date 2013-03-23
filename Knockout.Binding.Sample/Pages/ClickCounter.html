@@ -1,0 +1,17 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+	    <title></title>
+        <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js"></script>
+	</head>
+    <body>
+        <div>You've clicked <span data-bind='text: numberOfClicks'>&nbsp;</span> times</div>
+ 
+        <button data-bind='click: registerClick, disable: hasClickedTooManyTimes'>Click me</button>
+ 
+        <div data-bind='visible: hasClickedTooManyTimes'>
+            That's too many clicks! Please stop before you wear out your fingers.
+            <button data-bind='click: resetClicks'>Reset clicks</button>
+        </div>
+    </body>
+</html>

@@ -17,7 +17,8 @@ namespace Knockout.Binding.Sample
         private readonly Dictionary<string, ViewModelBase> m_Examples = new Dictionary<string, ViewModelBase>()
             {
                 {GetPageLocation("SomePage.htm"), new SimpleViewModel()},
-                {GetPageLocation("HelloWorld.html"), new HelloWorldViewModel()}
+                {GetPageLocation("HelloWorld.html"), new HelloWorldViewModel()},
+                {GetPageLocation("ClickCounter.html"), new ClickCounterViewModel()}
             };
 
         public MainForm()

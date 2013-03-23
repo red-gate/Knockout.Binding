@@ -53,6 +53,7 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ViewModels\ClickCounterViewModel.cs" />
     <Compile Include="ViewModels\HelloWorldViewModel.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -90,6 +91,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Pages\ClickCounter.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Pages\HelloWorld.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
