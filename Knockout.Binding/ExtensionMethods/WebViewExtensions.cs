@@ -52,7 +52,7 @@ namespace Knockout.Binding.ExtensionMethods
 
         private static void RegisterDomLoadCallback(WebView webView, KnockoutProxy proxy, PropertyChangedEventArgs args)
         {
-            if (args.PropertyName == "IsLoading" && !webView.IsLoading)
+            if (String.Equals(args.PropertyName, "IsLoading", StringComparison.OrdinalIgnoreCase) && !webView.IsLoading)
             {
                 webView.ExecuteScript(proxy.KnockoutViewModel);
             }
