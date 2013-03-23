@@ -7,7 +7,7 @@
     <ProjectGuid>{2FC3CF70-5BEA-496D-ACE4-0F92A1E10380}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>KnckoutBindingGenerater</RootNamespace>
+    <RootNamespace>Knockout.Binding</RootNamespace>
     <AssemblyName>KnckoutBindingGenerater</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -50,13 +50,13 @@
     <Compile Include="IBindableToJs.cs" />
     <Compile Include="JsonUtils.cs" />
     <Compile Include="KnockoutProxy.cs" />
-    <Compile Include="JavaScript Generators\KnockoutProxyGenerator.cs" />
-    <Compile Include="JavaScript Generators\ObservableArraysGenerator.cs" />
+    <Compile Include="Generators\KnockoutProxyGenerator.cs" />
+    <Compile Include="Generators\ObservableArraysGenerator.cs" />
     <Compile Include="ObservableCollectionEx.cs" />
-    <Compile Include="JavaScript Generators\PrimitiveObservablesGenerator.cs" />
+    <Compile Include="Generators\PrimitiveObservablesGenerator.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="JavaScript Generators\SimpleMethodsGenerator.cs" />
+    <Compile Include="Generators\SimpleMethodsGenerator.cs" />
     <Compile Include="ExtensionMethods\TypeExtensions.cs" />
     <Compile Include="ExtensionMethods\WebViewExtensions.cs" />
   </ItemGroup>

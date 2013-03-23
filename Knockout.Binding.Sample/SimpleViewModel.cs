@@ -2,7 +2,7 @@
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
-using KnckoutBindingGenerater;
+using Knockout.Binding;
 
 namespace CEF_Demo
 {

@@ -4,8 +4,9 @@ using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Reflection;
 using CefSharp.WinForms;
+using Knockout.Binding.Generators;
 
-namespace KnckoutBindingGenerater
+namespace Knockout.Binding.ExtensionMethods
 {
     public static class WebViewExtensions
     {

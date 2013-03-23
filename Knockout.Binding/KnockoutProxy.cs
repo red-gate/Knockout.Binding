@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace KnckoutBindingGenerater
+namespace Knockout.Binding
 {
     public class KnockoutProxy
     {

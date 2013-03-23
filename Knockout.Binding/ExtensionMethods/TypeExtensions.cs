@@ -4,7 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reflection;
 
-namespace KnckoutBindingGenerater
+namespace Knockout.Binding.ExtensionMethods
 {
     internal static class TypeExtensions
     {

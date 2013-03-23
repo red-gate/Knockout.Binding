@@ -5,7 +5,8 @@ using System.Reflection;
 using System.Windows.Forms;
 using CefSharp;
 using CefSharp.WinForms;
-using KnckoutBindingGenerater;
+using Knockout.Binding;
+using Knockout.Binding.ExtensionMethods;
 
 namespace CEF_Demo
 {

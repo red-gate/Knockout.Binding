@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace KnckoutBindingGenerater
+namespace Knockout.Binding
 {
     public interface IBindableToJs : INotifyPropertyChanged
     {

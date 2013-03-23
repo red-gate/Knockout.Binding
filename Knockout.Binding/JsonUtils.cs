@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace KnckoutBindingGenerater
+namespace Knockout.Binding
 {
     internal class JsonUtils
     {

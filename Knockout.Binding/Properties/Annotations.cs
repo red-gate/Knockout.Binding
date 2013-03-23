@@ -17,7 +17,7 @@
 using System;
 using System.ComponentModel;
 
-namespace KnckoutBindingGenerater.Annotations
+namespace Knockout.Binding.Annotations
 {
   /// <summary>
   /// Indicates that marked element should be localized or not.
