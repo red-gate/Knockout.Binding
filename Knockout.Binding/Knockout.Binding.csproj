@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Knockout.Binding</RootNamespace>
-    <AssemblyName>KnckoutBindingGenerater</AssemblyName>
+    <AssemblyName>Knockout.Binding</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
