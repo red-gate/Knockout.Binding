@@ -5,10 +5,9 @@ using System.Reflection;
 using System.Windows.Forms;
 using CefSharp;
 using CefSharp.WinForms;
-using Knockout.Binding;
 using Knockout.Binding.ExtensionMethods;
 
-namespace CEF_Demo
+namespace Knockout.Binding.Sample
 {
     public partial class MainForm : Form
     {

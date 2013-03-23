@@ -8,8 +8,8 @@
     <ProjectGuid>{E31EF161-4915-42C0-82BE-FF7FBB536F6F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CEF_Demo</RootNamespace>
-    <AssemblyName>CEF_Demo</AssemblyName>
+    <RootNamespace>Knockout.Binding.Sample</RootNamespace>
+    <AssemblyName>Knockout.Binding.Sample</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>

@@ -2,9 +2,8 @@
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
-using Knockout.Binding;
 
-namespace CEF_Demo
+namespace Knockout.Binding.Sample
 {
     public class SimpleViewModel : IBindableToJs, INotifyPropertyChanged
     {

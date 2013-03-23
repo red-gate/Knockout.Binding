@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
 
-namespace CEF_Demo
+namespace Knockout.Binding.Sample
 {
     static class Program
     {

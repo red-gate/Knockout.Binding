@@ -1,4 +1,4 @@
-﻿namespace CEF_Demo
+﻿namespace Knockout.Binding.Sample
 {
     partial class MainForm
     {
