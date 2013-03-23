@@ -2,12 +2,12 @@
 {
     public static class KnockoutProxyGenerator
     {
-        public static KnockoutProxy Generate(IBindableToJs javaScript)
+        public static KnockoutProxy Generate(IBindableToJs viewModel)
         {
-            return new KnockoutProxy(javaScript.Name,  
-                PrimitiveObservablesGenerator.GetPropertiesAsObservables(javaScript), 
-                SimpleMethodsGenerator.GetMethodProxies(javaScript), 
-                ObservableArraysGenerator.GetCollectionsAsObservables(javaScript));
+            return new KnockoutProxy(viewModel.Name,  
+                PrimitiveObservablesGenerator.GetPropertiesAsObservables(viewModel), 
+                SimpleMethodsGenerator.GetMethodProxies(viewModel), 
+                ObservableArraysGenerator.GetCollectionsAsObservables(viewModel));
         }
     }
 }

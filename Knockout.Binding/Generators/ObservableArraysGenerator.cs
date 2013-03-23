@@ -29,9 +29,9 @@ namespace Knockout.Binding.Generators
             return String.Join(Environment.NewLine, observableArrays);
         }
 
-        private static string CreateObservableArrayWithListener(string name, string instanceName, object values)
+        private static string CreateObservableArrayWithListener(string propertyName, string proxyInstanceName, object values)
         {
-            return String.Format(c_ObservableTemplate, name, instanceName, values.ToJson());
+            return String.Format(c_ObservableTemplate, propertyName, proxyInstanceName, values.ToJson());
         }
     }
 }
