@@ -19,6 +19,7 @@ namespace Knockout.Binding.Sample
                 {GetPageLocation("SomePage.htm"), new SimpleViewModel()},
                 {GetPageLocation("HelloWorld.html"), new HelloWorldViewModel()},
                 {GetPageLocation("SimpleList.html"), new SimpleListViewModel()},
+                {GetPageLocation("BetterList.html"), new BetterListViewModel()},
                 {GetPageLocation("ClickCounter.html"), new ClickCounterViewModel()}
             };
 

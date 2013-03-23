@@ -1,0 +1,21 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+	    <title></title>
+        <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js"></script>
+	</head>
+    <body>
+       <form data-bind="submit:addItem">
+    Add item: <input type="text" data-bind='value:itemToAdd, valueUpdate: "afterkeydown"' />
+    <button type="submit" data-bind="enable: itemToAdd().length > 0">Add</button>
+</form>
+ 
+<p>Your values:</p>
+<select multiple="multiple" height="5" data-bind="options:allItems, selectedOptions:selectedItems"> </select>
+ 
+<div>
+    <button data-bind="click: removeSelected, enable: selectedItems().length > 0">Remove</button>
+    <button data-bind="click: sortItems, enable: allItems().length > 1">Sort</button>
+</div>
+    </body>
+</html>
