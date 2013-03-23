@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="ViewModels\BetterListViewModel.cs" />
     <Compile Include="ViewModels\ClickCounterViewModel.cs" />
+    <Compile Include="ViewModels\ControlTypesViewModel.cs" />
     <Compile Include="ViewModels\HelloWorldViewModel.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -97,6 +98,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Pages\BetterList.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pages\ControlTypes.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Pages\SimpleList.html">
