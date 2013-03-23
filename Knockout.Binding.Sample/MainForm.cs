@@ -1,8 +1,8 @@
-﻿using System.IO;
+﻿using System;
+using System.ComponentModel;
+using System.IO;
 using System.Reflection;
-using System.Windows;
 using System.Windows.Forms;
-using System.Windows.Forms.Integration;
 using CefSharp;
 using CefSharp.WinForms;
 using KnckoutBindingGenerater;
@@ -18,22 +18,24 @@ namespace CEF_Demo
         {
             CEF.Initialize(new Settings());
 
-            m_WebView = new WebView(GetPageLocation(), new BrowserSettings());
-            m_WebView.RegisterForKnockout(m_SimpleViewModel);
-
-            m_WebView.PropertyChanged +=
-                (sender, args) =>
+            m_WebView = new WebView(GetPageLocation(), new BrowserSettings())
                 {
-                    if (args.PropertyName == "IsBrowserInitialized")
-                    {
-                        m_WebView.Load(GetPageLocation());
-                        m_WebView.ShowDevTools();
-                    }
+                    Dock = DockStyle.Fill
                 };
 
-            m_WebView.Dock =DockStyle.Fill;
+            m_WebView.RegisterForKnockout(m_SimpleViewModel);
+            m_WebView.PropertyChanged += OnWebBrowserInitialized;
             
             Controls.Add(m_WebView);
+        }
+
+        private void OnWebBrowserInitialized(object sender, PropertyChangedEventArgs args)
+        {
+            if (String.Equals(args.PropertyName, "IsBrowserInitialized", StringComparison.OrdinalIgnoreCase))
+            {
+                m_WebView.Load(GetPageLocation());
+                m_WebView.ShowDevTools();
+            }
         }
 
         private static string GetPageLocation()
