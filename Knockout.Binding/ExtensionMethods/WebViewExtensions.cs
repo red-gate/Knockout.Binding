@@ -78,7 +78,7 @@ namespace Knockout.Binding.ExtensionMethods
 
                                                   {0}.{1}.valueHasMutated();
             
-            ", s_Proxies[viewModel].ViewModelInstanceName, observableName, JsonUtils.GetJsonForEnumerable(values));
+            ", s_Proxies[viewModel].ViewModelInstanceName, observableName, values.ToJson());
 
             javascriptExecutor(updateObservable);
         }

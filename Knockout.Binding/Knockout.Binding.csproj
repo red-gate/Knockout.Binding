@@ -53,8 +53,8 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExtensionMethods\ObjectExtensions.cs" />
     <Compile Include="IBindableToJs.cs" />
-    <Compile Include="JsonUtils.cs" />
     <Compile Include="KnockoutProxy.cs" />
     <Compile Include="Generators\KnockoutProxyGenerator.cs" />
     <Compile Include="Generators\ObservableArraysGenerator.cs" />

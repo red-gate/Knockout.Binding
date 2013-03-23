@@ -32,9 +32,7 @@ namespace Knockout.Binding.Generators
                 }});
             ";
 
-            var valuesAsJson = JsonUtils.GetJsonForEnumerable((IEnumerable<object>)values);
-
-            return String.Format(c_ObservableTemplate, name, instanceName, valuesAsJson);
+            return String.Format(c_ObservableTemplate, name, instanceName, values.ToJson());
         }
     }
 }
